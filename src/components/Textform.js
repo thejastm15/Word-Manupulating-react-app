@@ -23,12 +23,10 @@ export default function TextForm(props) {
 
     const handleCopy = () => {
         navigator.clipboard.writeText(text); 
-        props.showAlert("Copied to Clipboard!", "success");
     }
     const handleExtraSpaces = () => {
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "));
-        props.showAlert("Extra spaces removed!", "success");
     }
 
     const [text, setText] = useState(''); 
